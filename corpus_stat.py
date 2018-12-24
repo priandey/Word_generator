@@ -5,11 +5,25 @@ import numpy as np
 import re
 import codecs
 
+def get_source_file(list_of_file):
+    for e in list_of_file:
+        print("{}.{}".format(list_of_file.index(e),e))
+    choice = int(input("Choose your source file by hitting the number : "))
+    return list_of_file[choice]
+
 def main():
 
     filepath = "source_file/"
-    filepath += input("Word Base File :")
-    name_output = input("Stat file name : ")
+    file_available = list()
+
+    with os.scandir(filepath) as listOfEntries:
+        for entry in listOfEntries:
+            if entry.is_file():
+                if entry.name != "README.md":
+                    file_available.append(entry.name)
+
+    filepath += get_source_file(file_available)
+    name_output = "current_work"
 
     count = np.zeros((256,256,256),dtype='int32')
     res = []
