@@ -6,7 +6,7 @@ The original program has been made by a french Youtuber, ScienceEtonnante, you c
 # How it works
 Today, the program is not very stable, but it works like this :
 
-First step, you need a corpus of words from the language you wish to "copy". The file should be raw text, a single word by line. Put it in "source_file", then launch the program.
+First step, you need a corpus of words from the language you wish to "copy". The file should be raw text, a single word by line. Put it in "source_file", then launch the program (word_generator.py).
 
 Enter your text file name (with extension if needed).
 Enter the name your proba file should have.
