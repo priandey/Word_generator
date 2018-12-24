@@ -1,5 +1,5 @@
 # Word Generator
-This project is a program that analyze a word corpus using a Markov Chain (https://en.wikipedia.org/wiki/Markov_chain) and render good looking words.
+This project is a program that analyze a word corpus using a Markov Chain (https://en.wikipedia.org/wiki/Markov_chain) and render a list of "real" looking words.
 
 The original program has been made by a french Youtuber, ScienceEtonnante, you can find his video (in french) here : https://www.youtube.com/watch?v=YsR7r2378j0&t=1s.
 
