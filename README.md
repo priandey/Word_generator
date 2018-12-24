@@ -15,4 +15,4 @@ Choose a range min and max for words length.
 You now have a new corpus of words, procedurally generated and good looking relatively to the corpus you inputed.
 
 # Corpus
-The corpus of words in source_file should be as wide as possible, ideally 1k words minimum, but the program will run with 2 words if given so.
+The corpus of words in source_file should be as wide as possible, ideally 1k words minimum, but the program will run with few words if given so.
