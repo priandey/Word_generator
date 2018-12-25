@@ -6,6 +6,8 @@ import re
 import codecs
 
 def get_source_file(list_of_file):
+    '''This function is used to print a list and the corresponding index. The
+    user is asked to choose an item of the list by selecting a number'''
     for e in list_of_file:
         print("{}.{}".format(list_of_file.index(e),e))
     choice = int(input("Choose your source file by hitting the number : "))
@@ -19,15 +21,15 @@ def main():
     with os.scandir(filepath) as listOfEntries:
         for entry in listOfEntries:
             if entry.is_file():
-                if entry.name != "README.md":
+                if entry.name != "README.md": #Add here the files you don't want listed in the program
                     file_available.append(entry.name)
 
     filepath += get_source_file(file_available)
-    name_output = "current_work"
+    name_output = "current_work" #If you want to keep a track of your stat_files for later usage, you should replace the value by input("Stat file name")
 
     count = np.zeros((256,256,256),dtype='int32')
     res = []
-
+    print("Calculating...")
     with codecs.open(filepath, "r", "iso-8859-1") as lines:
         for l in  lines:
             # Split on white space or open parenthesis and keep the first string

@@ -2,17 +2,24 @@
 
 import numpy as np
 from numpy.random import choice, seed
+
 import corpus_stat
-seed(1)
+
+import sys
+import warnings
 import codecs
+seed(1)
+
 CODEC = "ISO-8859-1"
+if not sys.warnoptions:
+    warnings.simplefilter("ignore")
 
-input_name = corpus_stat.main()
+stat_files = corpus_stat.main()
 
-filepath = input_name[0]
+filepath = stat_files[0]
 outfile = "render_file/"
 outfile += filepath.split("/")[1]
-probafile = "stat_file/count2D_{}.bin".format(input_name[1])
+probafile = "stat_file/count2D_{}.bin".format(stat_files[1])
 
 dico = []
 with codecs.open(filepath, "r", "ISO-8859-1") as lines:
